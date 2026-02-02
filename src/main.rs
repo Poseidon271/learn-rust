@@ -1,11 +1,13 @@
 fn main() {
-    let s1 = String::from("hello");
+    let width1 = 30;
+    let height1 = 50;
 
-    let len = calculate_length(&s1);
-
-    println!("The length of '{s1}' is {len}.");
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(width1, height1)
+    );
 }
 
-fn calculate_length(s: &String) -> usize {
-    s.len()
+fn area(width: u32, height: u32) -> u32 {
+    width * height
 }
